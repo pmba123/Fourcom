@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="style.css">
+   <link rel="shortcut icon" type="image/png" href="pics/Fourcom-logo-icon.png">
+   <title>Fourcom - Danmarks IT Distributør.</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ </head>
+ <body>
+<div class="site-wrapper">
+  <div class="page active" id="Home">
+   
+  <nav class="deskNav">
+    <ul class="desktopmenu">
+      <img src="pics/Fourcomlogo(hvid).png" alt="" class="logo" onclick="window.location.href='index.html'">
+      <div class="wrapdesktop">
+      <li><a href="index.html" data-target="Home" class="nav-link">Hjem</a></li>
+      <li><a href="shop.html" data-target="Shop" class="nav-link">Shop</a></li>
+      <li><a href="produkter.html" data-target="Produkter" class="nav-link">Produkter</a></li>
+      <li><a href="vitilbyder.html" data-target="Vi Tilbyder" class="nav-link">Vi Tilbyder</a></li>
+      <li><a href="personale.html" data-target="Personale" class="nav-link">Personale</a></li>
+      <li><a href="omos.html" data-target="Om os" class="nav-link">Om os</a></li>
+      <li><a href="kontakt.html" data-target="Kontakt" class="nav-link">Kontakt</a></li>
+    </ul>
+  </nav>
+
+  <nav class="mobilNav">
+    <ul class="mobilmenu">
+      <input type="checkbox" id="MobilMenu">
+      <label for="Mo" class="checkBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <img id="loginIkon"src="/pics/Ikoner/Fourcom-Ikoner--Login-.png" alt="Login Ikon" onclick="window.location.href='shop.html'">
+      <img src="pics/Fourcomlogo(hvid).png" alt="" class="logo" onclick="window.location.href='index.html'">
+      <div class="wrapmobil">
+        <h1>Menu</h1>
+      <li><a href="index.html" data-target="Home" class="nav-link">Hjem</a></li>
+      <li><a href="shop.html" data-target="Shop" class="nav-link">Shop</a></li>
+      <li><a href="produkter.html" data-target="Produkter" class="nav-link">Produkter</a></li>
+      <li><a href="vitilbyder.html" data-target="Vi Tilbyder" class="nav-link">Vi Tilbyder</a></li>
+      <li><a href="personale.html" data-target="Personale" class="nav-link">Personale</a></li>
+      <li><a href="omos.html" data-target="Om os" class="nav-link">Om os</a></li>
+      <li><a href="kontakt.html" data-target="Kontakt" class="nav-link">Kontakt</a></li>
+    </ul>
+  </nav>
+  
+    
+    <div class="frontbG parallax_scroll">
+      <div class="login">
+        <h1>Log ind</h1>
+        <input placeholder = "Kundenummer" type="text">
+        <input placeholder = "Password" type="password">
+        <button class="btn loginBtn">Log ind</button>
+      </div>
+
+      <div class="trackTrace">
+        <h1>Track&Trace</h1>
+        <input placeholder ="Indsæt dit T&T nummer" type="text">
+        <button class="btn trackTraceBtn">Find my package</button>
+      </div>
+
+    </div>
+    <a href="blivforhandler.html"><button class="btn" id="forhandlerBtn">Bliv Forhandler</button></a>
+      <div class="sec omsec parallax_scroll">
+        <img src="/pics/Ikoner/Fourcom-Forside-Ikoner.png" alt="">
+        <h1>Fourcom - Kort & Godt</h1>
+        <p>Fourcom er en af Danmarks førende og hurtigst voksende IT-distributører, og har siden 2007 samarbejdet med mere end 2500 kunder i Skandinavien og Europa. <br><br>
+           Hos Fourcom er vi specialister i bæredygtigt IT med markedets bedste garanti samt et væld af premium brands som blandt andet; ASUS, NZXT, Tier1 og Gigabyte. Hos Fourcom får du som kunde en samarbejdspartner der altid er klar til at gå det ekstra skridt for dig.
+
+           </p>
+        <button class="btn primaryBtn"><a href="omos.html">Læs mere</a></button>
+      </div>
+      
+      <section class="sec produktersec parallax_scroll">
+        
+        <h1>Produkter</h1>
+        <button class="btn produktBtnL"></button>
+        <button class="btn produktBtnR"></button>
+        <div class="bærbar">
+          
+          <img src="/pics/Ikoner/Fourcom-Ikoner-Laptop.png" alt="Laptop Ikon">
+          <h2>Bærbar</h2>
+          <button class="btn primaryBtn"><a href="produkter.html">Vis mere</a></button>
+          
+        </div>
+
+        <div class="stationær">
+          
+          <img src="/pics/Ikoner/Fourcom-Ikoner-DESKTOP.png" alt="Desktop Ikon">
+          <h2>Stationær</h2>
+          <button class="btn primaryBtn"><a href="produkter.html">Vis mere</a></button>
+        </div>
+
+        <div class="smartphones">
+          
+          <img src="/pics/Ikoner/Fourcom-Ikoner-IPHONE.png" alt="">
+          <h2>Smartphones</h2>
+          <button class="btn primaryBtn"><a href="produkter.html">Vis mere</a></button>
+        </div>
+
+        <div class="skærme">
+          
+          <img src="/pics/Ikoner/Fourcom-Ikoner-SKRÆM.png" alt="">
+          <h2>Skræme</h2>
+          <button class="btn primaryBtn"><a href="produkter.html">Vis mere</a></button>
+        </div>
+      </section>
+
+      <section class="sec vitilbydersec parallax_scroll">
+        <h1>Vi Tilbyder</h1>
+        <div class="distributionHome">
+          <a href="viTilbyder.html"><img src="/pics/Ikoner/Fourcom-Ikoner-distribution-lille-.png" alt="Distributions Ikon"></a>
+          <h3><a href="viTilbyder.html">Distribution</a></h3>
+        </div>
+        <div class="eksport">
+          <a href="viTilbyder.html"><img src="/pics/Ikoner/Fourcom-Ikoner-eksport.png" alt="Eksport ikon."></a>
+          <h3><a href="viTilbyder.html">Eksport</a></h3>
+        </div>
+        <div class="forhandlersalg">
+          <a href="viTilbyder.html"><img src="/pics/Ikoner/Fourcom-Ikoner-forhandlersalg.png" alt=""></a>
+          <h3>Forhandlersalg</a></h3>
+        </div>
+        <div class="produktsortiment" >
+          <a href="viTilbyder.html"><img src="/pics/Ikoner/Fourcom-produktsortiment-Ikoner.png" alt=""></a>
+          <h3><a href="viTilbyder.html">Produktsortiment</a></h3>
+        </div>
+        <div class="webshopsys" >
+          <a href="viTilbyder.html"> <img src="/pics/Ikoner/Fourcom-Ikoner-Systemintegration.png" alt=""></a>
+          <h3><a href="viTilbyder.html">Webshop & Systemintegration</a></h3>
+        </div>
+        <div class="produktudvilking" >
+          <a href="viTilbyder.html"><img src="/pics/Ikoner/Fourcom-Ikoner-produktudvikling.png" alt=""></a>
+          <h3><a href="viTilbyder.html">Produktudvikling & Design</a></h3>
+        </div>
+
+      </section>
+
+      <section class="sec brandssec parallax_scroll">
+        <h1>Vores Brands</h1>
+
+        <div class="brandpic1">
+          <h2>Green Gaming</h2>
+        </div>
+       
+
+        <div class="brandpic2">
+          <h2>Fourze</h2>
+        </div>
+        
+
+      </section>
+
+      <section class="sec personalesec parallax_scroll">
+        <h1>Mød vores salgschef</h1>
+        <div class="salespic"></div>
+        <h3>Kasper Holm Larsen</h3>
+        <h4>Salgschef</h4>
+        <h2>Vi byder dig velkommen til Fourcom</h2>
+        <p>Fourcom er en dansk distributør af kvalitets computer komponenter og periferi produkter med primært fokus på den danske IT-kanal. Således er vi en fokuseret distributør, hvor internationale samarbejdspartnere sikrer os et nøje udvalgt sortiment fra nogle af verdens førende producenter.
+          <br><br>
+          Alle vores medarbejdere har mange års erfaring fra IT-distributionsbranchen. Det gør os i stand til at levere løsninger på et højt serviceniveau, idet alle medarbejdere har en høj grad af produktviden, logistik- og markedskendskab.</p>
+        <button class="btn primaryBtn">Mød resten af personalet</button>
+      </section>
+
+      <section class="sec faqsec parallax_scroll">
+        <h1>FAQ</h1>
+        <div class="faqCard1">
+          <h3 class="front"> Hvordan bliver jeg forhandler?</h3>
+          <figure class="back"> 
+            <h4>Hvordan bliver jeg forhandler?</h4>
+            <p>
+              Dette gør du ved at klikke på vores "bliv forhandler" knap, hvorefter du udfylder vores forhandleransøgning. Herefter vender vi tilbage senest efter 5 hverdage.
+            </p> 
+           </figure>
+        </div>
+
+        <div class="faqCard2">
+          <h3 class="front"> Hvad er jeres leveringtid?</h3>
+          <figure class="back"> 
+            <h4>Hvad er jeres leveringstid?</h4>
+            <p>
+              Vi sender alle orderer kl 18 i hverdagene, kl 16 i weekenderne. Vores leveringstid til kunder i norden er mellem 24 og 72 timer.
+            </p> 
+           </figure>
+        </div>
+
+        <div class="faqCard3">
+          <h3 class="front"> Hvordan kommer jeg i kontakt med jer?</h3>
+          <figure class="back"> 
+            <h4>Hvordan kommer jeg i kontakt med jer?</h4>
+            <p>
+              Du kan enten ringe til vores hovedkontor på +45 96 32 21 00, eller til vores lager på +45 96 32 21 09.
+              <br>  Du kan kontakte os på vores mail salg@fourcom.dk. Yderligere information finder du <a href="kontakt.html">her</a>
+            </p> 
+           </figure>
+        </div>
+
+        <div class="faqCard4">
+          <h3 class="front"> Mit Track&Trace virker ikke, hvad gør jeg?</h3>
+          <figure class="back"> 
+            <h4>Mit Track&Trace virker ikke, hvad gør jeg?</h4>
+            <p>
+              Hvis dit Track & Trace ikke fungerer beder vi dig kontakte os på salg@fourcom.dk eller kn@fourcom.dk 
+            </p> 
+           </figure>
+        </div>
+
+        <div class="faqCard5">
+          <h3 class="front"> Hvor tit opdaterer i jeres sortiment?</h3>
+          <figure class="back"> 
+            <h4>Hvor tit opdaterer i jeres sortiment?</h4>
+            <p>
+              Vi opdaterer vores sortiment løbende. Vi har dygtige indkøbere der hverdag sidder og udplukker de bedste produkter til vores kunder.
+            </p> 
+           </figure>
+        </div>
+
+        <div class="faqCard6">
+          <h3 class="front"> Jeg vil gerne booke et møde, hvem kontakter jeg?</h3>
+          <figure class="back"> 
+            <h4>Jeg vil gerne booke et møde, hvem kontakter jeg?</h4>
+            <p>
+              Hvis du gerne vil booke et møde, beder vi dig sende en mail til salgschef Kasper Nørgaard på kn@fourcom.dk
+            </p> 
+           </figure>
+        </div>
+
+      </section>
+      
+      <footer>
+        <div class="menufooter">
+          <ul>
+            <h2>Menu</h2>
+            <li><a href="index.html" data-target="Home" class="nav-link">Hjem</a></li>
+            <li><a href="shop.html" data-target="Shop" class="nav-link">Shop</a></li>
+            <li><a href="produkter.html" data-target="Produkter" class="nav-link">Produkter</a></li>
+            <li><a href="viTilbyder.html" data-target="Vi Tilbyder" class="nav-link">Vi Tilbyder</a></li>
+            <li><a href="personale.html" data-target="Personale" class="nav-link">Personale</a></li>
+            <li><a href="omos.html" data-target="Om os" class="nav-link">Om os</a></li>
+            <li><a href="kontakt.html" data-target="Kontakt" class="nav-link">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="kontaktfooter">
+          <h2>Kontakt</h2>
+          <p>Salg@fourcom.dk</p>
+          <p>Sommervej 31b, 8210, Aarhus Danmark.</p> 
+          <p>+45 96 32 21 00</p>
+        </div>
+
+        <div class="lagerfooter">
+          <h2>Lager</h2>
+          <p>Østre Fælledvej 8, 9400 Nørresundby, Danmark.</p> 
+          <p>+45 96 32 21 09</p>
+        </div>
+      </footer>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="scroll.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+ </body>
+
+ </html>

@@ -1,0 +1,2012 @@
+@font-face{
+  font-family: 'Haas';
+  src: url(/font/NeueHaasUnica-Light.ttf);
+  font-style: normal;
+  font-weight: 100;
+}
+@font-face{
+  font-family: 'Haas';
+  src: url(/font/NeueHaasUnica-ExtraBlack.ttf);
+  font-style: bold;
+  font-weight: 900;
+}
+@font-face{
+  font-family: 'Haas';
+  src: url(/font/NeueHaasUnica-Medium.ttf);
+  font-style: medium;
+  font-weight: 600;
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Haas;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  height: 100vh;
+  width: 100%;
+}
+
+.page, .hide{
+  display: none;
+}
+.active{
+  display: block;
+}
+p{
+  line-height: 25px;
+}
+.btn{
+  width: auto;
+  font-size: 14px;
+  background-color: black;
+  border: none;
+  padding: 15px 15px 15px 15px;
+  border-radius: 100px;
+  color:white;
+  cursor: pointer;
+  margin-top: 1em;
+  height: 40px;
+  z-index: 100;
+}
+.btn a{
+  color: white;
+  text-decoration: none;
+}
+#forhandlerBtn{
+  margin: 1em;
+  position: fixed;
+  padding: 1em;
+  width: 15%;
+  height: 50px;
+}
+
+.parallax-effect{
+  background-color: lightgray;
+}
+
+#forhandlerBtn:hover{
+  -webkit-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  transition: 0.5s;
+}
+.secom{
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+}
+
+.sec h1{
+  font-size: 48px;
+  font-weight: 900;
+  font-family: Haas;
+}
+.sec p {
+  font-family: Haas;
+}
+
+input{
+  padding: 10px;
+  margin: 0.5em;
+  border-radius: 100px;
+  width: 80%;
+  border:none;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+.active{
+  display: block;
+}
+
+
+#loginIkon{
+  display: none;
+}
+nav{
+  position: relative;
+  z-index: 90;
+}
+.desktopmenu, .mobilmenu{
+  grid-column: 1/5;
+  display: grid;
+  grid-template-columns: 0.5fr 0.5fr 2fr;
+  min-width: 100%; 
+  padding: 0.5em;
+  background-color: #263A57;
+  align-items: center;
+  top:0;
+  padding-left: 40px;
+  padding-right: 40px;
+  position: fixed;
+  
+  -webkit-box-shadow: 1px 0px 16px -7px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 0px 16px -7px rgba(0,0,0,0.75);
+  box-shadow: 1px 0px 16px -7px rgba(0,0,0,0.75);
+}
+.logo{
+  grid-column: 1/2;
+  width: 200px;
+  justify-content: start;
+  cursor: pointer;
+}
+.wrapdesktop, li{
+  display: flex;
+  grid-template-columns: auto;
+  list-style-type: none;
+  justify-content: end;
+}
+.wrapdesktop a, .mobilmenu li a{
+  font-family: Haas;
+  color:white;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.wrapdesktop a:hover, .mobilmenu a:hover{
+  border-bottom: solid 1px white;
+  transition: 0.2s;
+}
+.desktopmenu > .logolink:hover{
+  clear: both;
+}
+.wrapdesktop{
+  grid-column: 4/5;
+}
+.mobilNav, .mobilmenu{
+  display: none;
+}
+
+#Home{
+grid-column: auto;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 85%;
+  position: relative;
+  background-color:#263A57;
+  border-radius: 22px;
+  z-index: 5;
+  grid-row: 1/1;
+  grid-column: 3/4;
+  margin-top: 55px;
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+}
+
+.login > h1{
+  color:white;
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
+.frontbG{
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background: url(/pics/FourcomLoginBG.png) center no-repeat;
+  background-size: cover;
+  height: 80vh;
+  margin-top: 70px;
+}
+
+.trackTrace{
+  grid-row: 2/2;
+  grid-column: 3/4;
+  position: relative;
+  text-align: center;
+  margin-top: 50px;
+  background-color: #3A6F8F;
+  height: 70%;
+  border-radius: 22px;
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+}
+.shop{
+  height: 100vh;
+}
+.ttshop{
+height: 60%;
+}
+
+.trackTrace > h1{
+  margin-top: 1em;
+  color:white;
+  padding: 0.5em;
+}
+
+.primaryBtn{
+  background-color: #263A57;
+  height: 50px;
+}
+.primaryBtn:hover{
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  transition: 0.5s ease-in-out;
+}
+.omsec{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(6, auto);
+  margin: 2em;
+  align-items: center;
+}
+
+.omsec h1{
+  grid-column: 3/5;
+  grid-row: 2/3;
+  font-size: 50px;
+  font-weight: 900;
+  padding:10px;
+}
+
+.omsec p{
+  top:0;
+  grid-column: 3/5;
+  grid-row: 3/4;
+  padding: 20px 10px 20px 10px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.omsec .btn{
+  grid-column: 3/4;
+  grid-row: 4/5;
+  padding:10px;
+  width: 50%;
+  height: 50px;
+}
+
+.omsec img{
+  display: flex;
+  grid-row: 1/6;
+  grid-column: 1/3;
+  width: 90%;
+  padding:10px;
+  align-items: center;
+}
+.produktersec{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: 100px 1fr 1fr 1fr;
+  margin-top: 100px;
+  border-radius: 20px;
+  padding:4em 4em 8em 4em;
+  height: 100vh;
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+}
+.produktersec h1{
+  padding: 0.5em;
+  grid-column: 1/8;
+  text-align: center;
+}
+
+.bærbar, .stationær, .smartphones, .skærme, .kaspersky, .bullguard, .norton, .mcAfee{
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  border: #263A57 2px soild;
+  border-radius: 10px;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+
+.bærbar, .bullguard{
+  grid-column: 2/3;
+  grid-row: 2/5;
+}
+.stationær, .kaspersky{
+  grid-column: 3/4;
+  grid-row: 2/5;
+}
+.smartphones,.mcAfee {
+  grid-column: 5/6;
+  grid-row: 2/5;
+}
+.skærme, .norton{
+  grid-column: 4/5;
+  grid-row: 2/5;
+}
+
+.bærbar img, .stationær img, .smartphones img, .skærme img, .bullguard img, .kaspersky img, .mcAfee img, .norton img{
+  background-position: center;
+  background-size: cover;
+  width: 250px;
+  border-radius: 10px;
+  border: #263A57 solid 1px;
+  margin: 1em;
+}
+
+.bærbar .btn, .stationær .btn, .smartphones .btn, .skærme .btn{
+  width: 50%;
+}
+.produktBtnL{
+  grid-row:3/4;
+  grid-column: 1/2;
+  width: 10%;
+  justify-content: center;
+  float: left;
+  background-color:white !important;
+  background-image: url(/pics/Btn-style-2.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 10%;
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+}
+.produktBtnR{
+  grid-row:3/4;
+  grid-column: 7/8;
+  width: 10%;
+  justify-content: center;
+  float: right;
+  background-color:white !important;
+  height: 10%;
+  background-image: url(/pics/Btn-Style.png);
+  background-size: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+}
+.produktBtnL:hover, .produktBtnR:hover{
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.70);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.70);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.70);
+  transition: 0.5s ease-in-out;
+}
+
+.vitilbydersec img{
+  width: 80%;
+}
+
+.vitilbydersec, .kortGodt, .levering, .struktur, .lager, .kundeservice{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /*grid-template-rows: repeat(4, 1fr);*/
+  grid-gap:10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 30px;
+  margin-top: 100px;
+  height: 100vh;
+}
+.vitilbydersec h1{
+  grid-column: 1/6;
+  padding: 1em;
+  font-family: Haas;
+  font-style: medium;
+}
+
+.vitilbydersec h3, .vitilbydersec a{
+  font-weight: 600;
+  text-decoration: none;
+  color:black;
+}
+
+.distributionHome{
+  grid-column:2/3;
+  grid-row:2/3;
+  margin: 0 auto;
+}
+.distributionHome img{
+  width: 100%;
+}
+
+
+.eksport{
+  grid-column:3/4;
+  grid-row:2/3;
+}
+.forhandlersalg{
+  grid-column:4/5;
+  grid-row:2/3;
+}
+.produktsortiment{
+  grid-column:2/3;
+  grid-row:3/4;
+}
+.webshopsys{
+  grid-column:3/4;
+  grid-row:3/4;
+}
+.produktudvilking{
+  grid-column:4/5;
+  grid-row:3/4;
+}
+/*Showdow generet på https://www.cssmatic.com/box-shadow */ 
+.produktudvilking, .webshopsys, .produktsortiment, .forhandlersalg, .eksport, .distributionHome{
+  -webkit-box-shadow: 1px 5px 16px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 5px 16px -10px rgba(0,0,0,0.75);
+  box-shadow: 1px 5px 16px -10px rgba(0,0,0,0.75);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 20px;
+  height: 250px;
+  padding:2em;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandssec{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(2, auto);
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.brandssec h1 {
+grid-column: 2/4;
+text-align: center;
+padding: 1em;
+font-family: Haas;
+}
+
+.brandssec h2{
+  grid-column: 2/3;
+}
+
+.brandpic1{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-image:url(/pics/buy-refurbished-electronics\ \(1\).jpg);
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  margin: 1em;
+  grid-row: 2/3;
+  grid-column: 2/3;
+  text-align: center;
+  align-items: center;
+  top:0;
+  left:0;
+  color:white;
+  
+}
+.brandpic2{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-image:url(/pics/gamer_room\ \(1\).jpg);
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 500px;
+  margin: 1em;
+  text-align: center;
+  align-items: center;
+  float: left;
+  grid-row: 2/3;
+  grid-column: 3/4;
+  color:white;
+}
+.brandpic1:hover, .brandpic2:hover, .produktudvilking:hover, .webshopsys:hover, .produktsortiment:hover, .forhandlersalg:hover, .eksport:hover, .distributionHome:hover {
+  -webkit-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  cursor: pointer;
+  transition: 0.5s;
+}
+.personalesec{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, auto);
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.salespic{
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  align-items: center;
+  grid-row: 2/4;
+  grid-column:2/4;
+  background-image: url(/pics/KN-Sort-hvid.jpg);
+  border-radius: 50%;
+  background-position:center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  align-items: center;
+  
+}
+.personalesec > h2{
+  grid-column: 4/7;
+  grid-row: 1/3;
+  width: 80%;
+  padding: 0.5em;
+  margin-bottom: 50px;
+}
+.personalesec > h3{
+  grid-column: 2/4;
+  grid-row: 4/5;
+  font-size: 22px;
+}
+.personalesec > h4{
+  margin-top: 50px;
+  align-items: baseline;
+  grid-row:4/5;
+  grid-column: 2/4;
+  font-weight: 500;
+}
+
+.personalesec h1{
+  grid-row: 1/2;
+  grid-column: 2/6;
+  padding: 1em;
+  justify-content: end;
+  text-align: center;
+}
+
+.personalesec > p{
+  grid-row: 2/4;
+  grid-column: 4/7;
+  width: 80%;
+  justify-content: end;
+  padding: 1em;
+  margin-top: 30px;
+}
+
+.personalesec .btn{
+  grid-row: 3/3;
+  grid-column: 4/7;
+  width: 30%;
+  margin-left: 1em;
+}
+
+.faqsec{
+  margin: 10px;
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr 1fr;
+  grid-gap: 10px;
+  padding: 1em;
+}
+
+/* Tutorial Fulgt for Card Animations: https://www.youtube.com/watch?v=y_6fVz9jPWA&t=591s */
+
+.faqCard1, .faqCard2, .faqCard3, .faqCard4, .faqCard5, .faqCard6{
+  display: flex;
+  width: auto;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transform-style:preserve-3d;
+  cursor: pointer;
+  -webkit-box-shadow: 1px 5px 16px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 5px 16px -10px rgba(0,0,0,0.75);
+  box-shadow: 1px 5px 16px -10px rgba(0,0,0,0.75);
+  transition: all 1s ease-in-out;
+}
+
+.faqCard1:hover, .faqCard2:hover, .faqCard3:hover, .faqCard4:hover, .faqCard5:hover, .faqCard6:hover{
+  -webkit-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  transform: rotateY(180deg);
+  transition:1s ease-in-out;
+}
+
+.faqsec h1{
+  align-items: center;
+  grid-column: 1/5;
+  grid-row: 1/2;
+  height: 1em;
+  margin: 0 auto;
+  
+}
+
+.faqCard1 h3, .faqCard2 h3, .faqCard3 h3, .faqCard4 h3, .faqCard5 h3, .faqCard6 h3{
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+  position: absolute;
+}
+
+.front{
+  
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.back{
+  transform: rotateY(180deg);
+  text-align: center;
+  width: 80%;
+  backface-visibility: hidden;
+}
+
+.back h4{
+  padding: 15px 15px 15px 0px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.back p{
+  font-size: 14px;
+}
+
+.faqCard1{
+  grid-column:1/2;
+  grid-row: 2/3;
+}
+.faqCard2{
+  grid-column:2/3;
+  grid-row: 2/3;
+}
+.faqCard3{
+  grid-column:3/4;
+  grid-row: 2/3;
+}
+.faqCard4{
+  grid-column:1/2;
+  grid-row: 3/4;
+}
+.faqCard5{
+  grid-column:2/3;
+  grid-row: 3/4;
+}
+.faqCard6{
+  grid-column:3/4;
+  grid-row: 3/4;
+}
+.distributionViTilbyder, .produktsortimentVT, .pdesign, .kortGodt, .struktur, .kundeservice, .personaleVelkommen{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+  height: 60vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.distributionViTilbyder h2, .produktsortimentVT h2, .pdesign h2, .kortGodt h2, .struktur h2, .kundeservice h2, .personaleVelkommen h2{
+  grid-column: 1/2;
+  grid-row: 1/1;
+  text-align: start;
+  padding: 1em 1em 0em 50px;
+  margin-bottom: 10em;
+  font-size: 40px;
+}
+.distributionViTilbyder p, .produktsortimentVT p, .pdesign p, .kortGodt p, .struktur p, .kundeservice p, .personaleVelkommen p{
+  grid-column: 1/3;
+  grid-row: 1/1;
+  text-align: start;
+  padding: 0em 1em 1em 50px;
+  font-size: 18px;
+  width: 55%;
+}
+
+.distributionViTilbyder img, .produktsortimentVT img, .pdesign img, .kortGodt img, .struktur img, .kundeservice img, .personaleVelkommen img{
+  grid-column: 2/3;
+  grid-row: 1/1;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 2em 4em;
+
+}
+.viTilbyderH1, .omOsH1, .kontaktsec h1, .personaleH1{
+  margin-top: 150px;
+  margin-bottom: 100px;
+  font-size: 50px;
+  grid-column: 1/5;
+  text-align: center;
+}
+
+.eksportVT, .forhandlerVT, .webshopSystemInt, .levering, .lager{
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  height: 70vh;
+  justify-content: center;
+  align-items: center;
+}
+.eksportVT h2, .forhandlerVT h2, .webshopSystemInt h2, .levering h2, .lager h2{
+  grid-column: 2/3;
+  grid-row: 1/1;
+  margin-bottom: 10em;
+  padding: 1em 1em 0em 50px;
+  font-size: 40px;
+}
+.eksportVT p, .forhandlerVT p, .webshopSystemInt p, .levering p, .lager p{
+  grid-column: 2/3;
+  grid-row: 1/1;
+  text-align: start;
+  padding: 0em 1em 1em 50px;
+  font-size: 18px;
+  width: 90%;
+  line-height: 30px;
+}
+.eksportVT img, .forhandlerVT img,.webshopSystemInt img, .levering img, .lager img{
+  grid-column: 1/2;
+  grid-row: 1/1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2em 4em;
+}
+.lager, .struktur, .kundeservice, .levering, .kortGodt{
+  -webkit-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  -moz-box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  box-shadow: 1px 5px 16px -3px rgba(0,0,0,0.30);
+  height: 80vh;
+}
+.struktur img, .kundeservice img, .kortGodt img{
+width: 80%;
+margin: 0 auto;
+}
+.lager h2, .levering h2{
+  text-align: start;
+  padding: 1;
+}
+#Ombtn{
+  grid-column: 2/2;
+  grid-row: 2/3;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  height: 60px;
+}
+.kontaktsec{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(7, auto);
+}
+.hovedkontor{
+  grid-column: 1/3;
+  padding-left: 10em;
+}
+.rmaLager{
+  grid-column: 3/5;
+  margin-bottom: 150px;
+  padding-left: 10em;
+}
+
+.hovedkontor, .rmaLager{
+  height: 50vh;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.hovedkontor h2, .rmaLager h2{
+  font-size: 36px;
+  padding: 10px;
+  
+}
+.hovedkontor h3, .rmaLager h3{
+  font-size: 22px;
+  font-weight: 600;
+  padding: 10px;
+  
+}
+.hovedkontor p, .rmaLager p{
+  font-size: 22px;
+  width: 60%;
+  padding: 5px 5px 5px 10px;
+}
+.maps, iframe{
+  height: 80vh;
+  width: 100%;
+}
+
+.btnWrapper{ 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 40vh;
+  margin: 0 auto;
+}
+.btnWrapper a{
+  grid-row: 2;
+  grid-column: 2;
+  margin: 0 auto;
+}
+
+.btnWrapper > a > button{
+  width: 50px;
+}
+#VTbtn{
+  grid-column: 1/4;
+  margin: 2em auto;
+  text-align: center;
+  height: 60px;
+  width: 10%;
+  cursor: pointer;
+  margin-bottom: 100px;
+}
+.proH2{
+  grid-column: 2/3;
+  grid-row: 3/3;
+  font-size: 32px;
+  margin-top: -120px;
+}
+
+.pSecWrap{
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-template-rows:repeat(6, auto);
+  grid-gap: 10px;
+}
+
+.klaus{
+  background-image: url(/pics/Klaus.jpg);
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+.rene{
+  background-image: url(/pics/rene.jpg);
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+.kasper{
+  background-image: url(/pics/KN-Sort-hvid.jpg);
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+.nicolai{
+  background-image: url(/pics/NL-Sort-hvid-681x1024.jpg);
+  grid-row: 2/3;
+  grid-column: 4/4;
+}
+.anders{
+  background-image: url(/pics/AB-Sort-hvid-scaled.jpg);
+  grid-row: 2/3;
+  grid-column: 3/3;
+}
+.martin{
+  background-image: url(/pics/MHP-Sort-hvid-682x1024.jpg);
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+.personaleVelkommen{
+  margin-bottom: 100px;
+}
+.personalePic{
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 2em;
+  margin: 0 auto;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.personalePic h3{
+  grid-row: 3/4;
+  margin-top: 280px;
+}
+.personalePic h4{
+  font-weight: 500;
+}
+.personalePic:hover{
+  -webkit-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  transition:0.5s;
+}
+.pSecWrap img{
+  display: none;
+}
+.pSecWrap .btn{
+  grid-row: 4;
+  grid-column: 2/5;
+  margin: 100px auto;
+  width: 15%;
+}
+.blivForhandler, .takSec{
+  display: grid;
+  grid-template-columns: repeat(6, auto);
+  grid-template-rows: repeat(10, auto);
+  margin: 0 auto;
+}
+.blivForhandler input{
+  border-radius: 100px;
+  border: 1px solid lightgray;
+  -webkit-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 6px 34px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 1px 5px -1px rgba(0,0,0,0.75);
+  padding: 1em;
+}
+.blivForhandler h1, .blivForhandler p, .takSec h1, .takSec p, .takSec h2, .takSec h3{
+  grid-row: 1;
+  grid-column: 1/7;
+  margin: 0 auto;
+}
+.blivForhandler h1, .takSec h1{
+  font-size: 50px;
+  margin-top: 150px;
+}
+.blivForhandler p, .takSec p{
+  margin-top: 200px;
+  font-size: 18px;
+}
+.svar1{
+  grid-row: 2;
+  grid-column: 3/5;
+  margin: 0 auto;
+  width: 50%;
+}
+.svar2{
+  grid-row: 3;
+  grid-column: 3/5;
+}
+.svar3{
+  grid-row: 4;
+  grid-column: 3/5;
+}
+.svar4{
+  grid-row: 5;
+  grid-column: 3/5;
+}
+.svar5{
+  grid-row: 6;
+  grid-column: 3/5;
+}
+.svar6{
+  grid-row: 7;
+  grid-column: 3/5;
+}
+.svar7{
+  grid-row: 8;
+  grid-column: 3/5;
+}
+.svar8{
+  grid-row: 9;
+  grid-column: 3/5;
+}
+.blivForhandler > a{
+  grid-row: 10;
+  grid-column: 3/5;
+  margin: 50px auto;
+}
+.nBtn{
+  width: 100%;
+  padding: 1em;
+} 
+.svar1, .svar2, .svar3, .svar4, .svar5, .svar6, .svar7, .svar8{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr;
+  margin: 20px auto;
+  padding: 40px;
+  grid-gap:10px;
+}
+
+.svar1 input, .svar2 input, .svar3 input, .svar4 input, .svar5 input, .svar6 input, .svar7 input, .svar8 input{
+  width: 100%;
+  height: 40px;
+  grid-row: 2;
+  grid-column: 2;
+  margin:10px;
+}
+.svar1 h1, .svar2 h1, .svar3 h1, .svar4 h1, .svar5 h1, .svar6 h1, .svar7 h1, .svar8 h1{
+  margin: auto 0;
+  grid-row: 1/5;
+  grid-column: 1;
+  font-size: 100px;
+  color: lightgray;
+  font-weight: 600;
+}
+.svar1 h2, .svar2 h2, .svar3 h2, .svar4 h2, .svar5 h2, .svar6 h2, .svar7 h2, .svar8 h2{
+  grid-row: 1/5;
+  grid-column: 2/3;
+}
+
+.svar1, .svar3, .svar4{
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.svar1 .input1, .svar2 .input1{
+  grid-row: 2;
+  grid-column: 2;
+}
+.svar1 .input2, .svar2 .input2{
+  grid-row: 2;
+  grid-column: 3;
+}
+.svar1 .heading1, .svar2 .heading1{
+  grid-row: 1;
+  grid-column: 2;
+  
+}
+.svar1 .heading2, .svar2 .heading2{
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.heading1, .heading2, .nr, .gadenavn, .postnummer{
+  margin: auto 0;
+}
+.blivForhandler > span, .takSec > span{
+  border:  0.5px solid lightgray;
+  height: 0px;
+  width: 90%;
+  margin: 0 auto;
+  grid-column: 3/5;
+}
+.span1{
+  grid-row: 3;
+  grid-column: 3/5;
+}
+.span2{
+  grid-row: 4;
+}
+.span3{
+  grid-row: 5;
+}
+.span4{
+  grid-row: 6;
+}
+.span5{
+  grid-row: 7;
+}
+.span6{
+  grid-row: 8;
+}
+.span7{
+  grid-row: 9;
+}
+.spantak{
+  grid-row: 2;
+  grid-column: 2/6 !important;
+  width: 100%;
+}
+.svar2{
+  grid-template-columns: 100px 1fr 100px 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+.svar2 .gadenavn{
+  grid-row: 2;
+  grid-column: 2;
+  font-weight: 500;
+}
+.svar2 .input1{
+  grid-row: 3;
+  grid-column: 2;
+}
+.svar2 .input2{
+  grid-row: 3;
+  grid-column: 3;
+}
+.svar2 .input3{
+  grid-row: 3;
+  grid-column: 4;
+}
+.svar2 .nr{
+  grid-row: 2;
+  font-weight: 500;
+}
+.svar2 .postnummer{
+  grid-row: 2;
+  grid-column: 4;
+  font-weight: 500;
+}
+
+.svar3 .heading1, .svar4 .heading1{
+  grid-row: 1;
+  grid-column: 2;
+}
+.svar3 .heading2, .svar4 .heading2{
+  grid-row: 1;
+  grid-column: 3;
+}
+.svar3 .input2, .svar4 .input2{
+    grid-row: 2;
+    grid-column: 3;
+  
+}
+.svar5{
+  grid-template-columns: 100px 1fr 1fr;
+  grid-template-rows: repeat(3, auto);
+}
+.svar5 .heading1{
+  grid-row: 1;
+  grid-column: 2;
+}
+.svar5 .input1{
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.svar5 .heading2{
+  grid-row: 3;
+  grid-column: 2;
+}
+.svar5 .input2{
+  grid-row: 4;
+  grid-column: 2;
+}
+.svar5 .heading3{
+  grid-row: 1;
+  grid-column: 3;
+}
+.svar5 .input3{
+  grid-row: 2;
+  grid-column: 3;
+}
+.svar6 .heading1, .svar7 .heading1, .svar8 .heading1{
+  grid-row: 1;
+  grid-column: 2/5;
+}
+.svar6 .input1, .svar7 .input1{
+  grid-column: 2/7;
+}
+.svar8{
+grid-template-columns: 100px 1fr;
+grid-template-rows: 1fr 1fr;
+}
+.svar8 .input2{
+  width: 40px;
+  border-radius: 0;
+}
+.svar8 h3{
+  grid-column: 2;
+  grid-row: 2;
+  font-weight: 500;
+  margin: auto 0;
+  padding-left: 5em;
+}
+.takSec{
+  height: 100vh;
+}
+.takSec h2{
+  grid-row: 3;
+  grid-column: 2/6;
+  font-size: 56px;
+  padding: 1em;
+}
+.takSec h3{
+  grid-row: 3;
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 130px;
+}
+.takSec p{
+  grid-row: 1;
+}
+.takSec > a{
+  grid-row: 5;
+  grid-column: 2/6;
+  margin: 0 auto;
+}
+
+
+
+footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #263A57;
+  justify-content: center;
+  align-items: start;
+  padding: 2em;
+  height: 600px;
+}
+
+.menufooter{
+  color:white;
+  grid-row: 2/3;
+  padding-left: 4em;
+}
+.menufooter h2{
+  margin-bottom: 1em;
+  font-size: 60px;
+}
+.menufooter li a{
+  text-decoration: none;
+  color:white;
+  font-size: 36px;
+  
+}
+.menufooter li {
+  list-style-type: none;
+}
+
+.kontaktfooter {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  color:white;
+  justify-content: start;
+  padding-left: 4em;
+}
+.kontaktfooter p, .lagerfooter p{
+  text-decoration: none;
+  width: 70%;
+  color:white;
+  font-size: 36px;
+  line-height: normal;
+}
+.kontaktfooter h2, .lagerfooter h2{
+  margin-bottom: 1em;
+  font-size: 60px;
+}
+.lagerfooter{
+  color:white;
+  grid-row: 2/3;
+  grid-column: 3/4;
+  padding-left: 4em;
+}
+/* Styles til Tablet */
+@media only screen and (max-width: 915px){
+
+
+  .active{
+    display: block !important;
+  }
+  .page{
+    overflow: hidden;
+  }
+  p{
+    font-size: 14px;
+  }
+  .desktopmenu{
+    display: none !important;
+  }
+  .mobilNav{
+  display: block;
+  }
+
+  .mobilmenu{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    transition: all 0.5s;
+    padding: 0;
+  }
+  .mobilmenu label, .menu input{
+    display: inline;
+    grid-row: 1/1;
+    grid-column: 1/2;
+  }
+
+  .mobilmenu li a{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .wrapmobil{
+    display: grid;
+    grid-row: 3/4;
+    grid-column: 2/2;
+    height: 100vh;
+    display: none; 
+    text-align: center;
+    
+  }
+
+  .wrapmobil li{
+   
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  .wrapmobil h1{
+    grid-column: 2/3;
+    grid-column: 2/3;
+    color:white;
+    margin: 20px;
+    margin-bottom: 40px;
+    font-size: 36px;
+  }
+
+  .logo{
+    margin: 0 auto;
+    grid-row: 1/1;
+    grid-column: 2/3;
+  }
+
+  .mobilmenu .checkBtn, #MobilMenu{
+    grid-row: 1/1;
+    grid-column: 3/4 !important;
+    margin: 0 auto;
+    padding: 1em;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .mobilmenu .checkBtn span{
+    display: flex;
+    flex-direction: row;
+    z-index: 6;
+    position: relative;
+    color:white;
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    margin: 5px;
+    padding: 1px;
+    justify-content: end;
+    grid-row: 1/1;
+    grid-column: 3/4;
+    border-radius: 5px;
+  }
+
+  #loginIkon{
+    display: block;
+    margin: 0 auto;
+    max-width: 25%;
+    grid-row: 1/1;
+    grid-column: 1/1;
+    cursor: pointer;
+  }
+
+  .mobilmenu #MobilMenu:checked ~ .wrap{
+    display: block;
+  }
+  .omsec{
+    margin-bottom: 50px;
+  }
+  .omsec h1{
+    font-size: 36px;
+  }
+  .omsec p{
+    font-size:16px;
+  }
+  .omsec .btn{
+    width: 60%;
+    height: 40px;
+  }
+  #forhandlerBtn{
+    display: none;
+  }
+  
+  .skærme, .smartphones, .norton, .mcAfee{
+    display: none;
+  }
+  .produktersec h1{
+    grid-column: 1/5;
+    margin-top: 50px;
+    padding: 1em;
+  }
+  .produktersec{
+    display:grid;
+    grid-template-columns: 50px 1fr 1fr 50px;
+    grid-template-rows:repeat(5, 1fr);
+    margin: 1em auto;
+    justify-content: center;
+    padding: 1em;
+    height: 70vh;
+
+  }
+  .proH2{
+    margin-bottom: 8em;
+  }
+
+  .produktBtnR{
+    grid-column: 4/5;
+  }
+  .brandpic1, .brandpic2{
+    height: 300px;
+    width: 300px;
+  }
+
+  .personalesec{
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .personalesec p{
+    grid-column: 6/8;
+    grid-row: 3/4;
+    width: 100%;
+  }
+  .personalesec h2{
+    grid-column: 5/9;
+    grid-row: 2/2;
+    margin: 0;
+  }
+  .personalesec h1{
+    grid-column: 1/9;
+    grid-row: 1/2;
+  }
+
+  .personalesec .btn{
+    grid-column: 5/8;
+    grid-row: 3/6;
+    width: 55%;
+    justify-content: center;
+    margin-top: 250px;
+    height: 40px;
+  }
+
+  .salespic{
+    width:300px;
+    height: 300px;
+    grid-column: 3/5;
+  }
+  .personalesec h3{
+    grid-column: 2/5;
+    grid-row: 4/4;
+    padding: 50px;
+    margin-top: -50px;
+  }
+  .personalesec h4{
+    grid-column: 2/5;
+    padding: 50px;
+    margin-top: -10px;
+  }
+  .kortGodt, .levering , .struktur, .lager, .kundeservice {
+    height: 100vh;
+  }
+  .eksportVT, .forhandlerVT, .webshopSystemInt,.distributionViTilbyder, .produktsortimentVT, .pdesign{
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(2, auto);
+    margin-bottom:100px;
+    height: 70vh;
+  }
+
+  .eksportVT h2, .forhandlerVT h2, .webshopSystemInt h2,.distributionViTilbyder h2, .produktsortimentVT h2, .pdesign h2, .kortGodt h2,.levering h2, .struktur h2, .lager h2, .kundeservice h2{
+    grid-row: 1/1;
+    grid-column: 1/3;
+    margin: 0;
+    font-size: 28px;
+    margin-bottom:-120px;
+    padding: 85px;
+  }
+
+  .kortGodt h2,.levering h2, .struktur h2, .lager h2, .kundeservice h2{
+    padding-left: 90px;
+  }
+  .eksportVT p, .forhandlerVT p, .webshopSystemInt p, .distributionViTilbyder p, .produktsortimentVT p, .pdesign p, .kortGodt p, .levering p,.struktur p, .lager p, .kundeservice p{
+    grid-row: 2/2;
+    grid-column: 1/3;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 50px;
+  }
+  .eksportVT img, .forhandlerVT img, .webshopSystemInt img, .distributionViTilbyder img, .produktsortimentVT img, .pdesign img, .kortGodt img, .levering img, .struktur img, .lager img, .kundeservice img{
+    grid-row: 3/3;
+    grid-column: 1/3;
+    width: 60%;
+    margin: 0px auto;
+    top:0;
+  }
+  .btnWrapper{
+    height: 20vh;
+  }
+   #VTbtn{
+     width: 50%;
+   }
+   #Ombtn{
+     width: 50%;
+   }
+  .kontaktfooter > p {
+    font-size: 24px;
+
+  }
+  .lagerfooter > p{
+    font-size: 24px;
+  }
+
+  .menufooter > ul > li > a {
+    font-size: 24px;
+    margin: 0 auto;
+  }
+
+  .menufooter h2, .kontaktfooter h2, .lagerfooter h2{
+    font-size: 36px;
+  }
+
+  .faqsec{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+  }
+  .faqCard3{
+    grid-row: 4/4;
+    grid-column: 2/3;
+  }
+  .faqCard6{
+    grid-row: 4/4;
+    grid-column: 1/2;
+  }
+  .personaleVelkommen{
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: 100px 300px;
+    margin: 0;
+  }
+  .personaleVelkommen h2{
+    grid-row: 1/2;
+    grid-column: 1/3;
+    bottom: 0;
+    margin:0px 0px 0px 0px;
+  }
+  .personaleVelkommen p{
+    grid-row: 2;
+    grid-column: 1/3;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+  }
+  .personaleVelkommen img{
+  display: none;
+  }
+
+  .personalePic{
+    width: 226px;
+    height: 226px;
+  }
+
+  .pSecWrap{
+    margin: -50px auto;
+
+    grid-template-rows: repeat(3, auto);
+  }
+  .pSecWrap img{
+    display: block;
+    grid-row: 3;
+    grid-column: 1/5;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .pSecWrap .btn{
+    display: block;
+    grid-row: 3;
+    grid-column: 1/5;
+    z-index: 2;
+    margin: 370px auto 100px auto;
+    width: 30%;
+    align-items: center;
+  }
+  .pSecWrap h3{
+    margin-top: 240px;
+  }
+  .pSecWrap h4{
+    
+  }
+  .hovedkontor, .rmaLager{
+    padding: 1em 1em 1em 100px;
+  }
+
+
+  footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    height: 100% !important;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .menufooter{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .kontaktfooter{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  .lagerfooter{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+    width: 100% !important;
+  }
+
+  .kontaktfooter p, .lagerfooter p{
+    margin: 0 auto;
+    width: 60%;
+  }
+  .menufooter h2, .kontaktfooter h2, .lagerfooter h2{
+    margin-bottom: 0.5em;
+
+  }
+
+}
+/* Styles til Mobil */
+@media only screen and (max-width: 425px){
+
+  .site-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .page{
+    width: 100%;
+  }
+  .logo{
+    width: 150px;
+  }
+  .dekstopmenu, .deskNav{
+    display: none;
+  }
+  #loginIkon{
+    margin: 0 auto;
+    min-width: 70px;
+    padding: 20px;
+  }
+  .mobilmenu{
+    grid-column: 1/3;
+  }
+  .frontbG{
+    grid-column: 1/3;
+  }
+  #Home{  
+    grid-column: auto;
+  }
+  .omsec{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+  .omsec h1{
+    grid-column: 1/5;
+    grid-row: 1/2;
+  }
+  .omsec p{
+    grid-column: 1/5;
+    grid-row: 2/3;
+  }
+  .omsec img{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    width: 70%;
+    margin: 0 auto;
+  }
+  .omsec .btn{
+    margin: 0 auto;
+    grid-column: 2/4;
+  }
+  .vitilbydersec h1{
+    grid-column: 1/4;
+    font-size: 36px;
+  }
+  .vitilbydersec{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    padding: 1em;
+  }
+  .forhandlersalg{
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .produktersec h1{
+    font-size: 36px;
+  }
+  .produktersec
+
+
+  .forhandlersalg{
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+  .webshopsys{
+    grid-row: 3/4;
+    grid-column: 1/2;
+  }
+  .eksport{
+    grid-column: 1/2;
+  }
+  .produktudvilking{
+    grid-row: 4/5;
+    grid-column: 2/3;
+  }
+
+  .personalesec{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+  }
+  .personalesec h1{
+    grid-row: 1/1;
+    grid-column: 1/3;
+    font-size: 36px;
+  }
+  .personalesec h2{
+    grid-row: 3/4;
+    grid-column: 1/3;
+    margin: 0 auto;
+  }
+  .personalesec h3, .personalesec h4{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    justify-content: start;
+    padding: 10px;
+    
+  }
+  .personalesec h4{
+    margin-top: 30px;
+  }
+  
+  .personalesec p{
+    grid-row: 4/5;
+    grid-column: 1/3;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .salespic{
+    grid-row: 2/3;
+    grid-column: 1/1;
+    padding: 1em;
+    margin: 0 auto;
+    width: 150px;
+      height: 150px;
+  }
+  .personalesec .btn{
+    grid-row: 5/5;
+    grid-column: 1/3;
+    margin: 0 auto;
+    width: 50%;
+    padding: 1em;
+  }
+  .eksportVT, .forhandlerVT, .webshopSystemInt,.distributionViTilbyder, .produktsortimentVT, .pdesign, .kortGodt{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    margin-top: 100px;
+    height: 90vh;
+  }
+  .eksportVT h2, .forhandlerVT h2, .webshopSystemInt h2,.distributionViTilbyder h2, .produktsortimentVT h2, .pdesign h2, .kortGodt h2{
+    grid-row: 1/1;
+    grid-column: 1/2;
+    padding: 50px;
+    margin-top: -100px;
+
+  }
+  .eksportVT p, .forhandlerVT p, .webshopSystemInt p, .distributionViTilbyder p, .produktsortimentVT p, .pdesign p, .kortGodt p{
+    grid-row: 2/2;
+    grid-column: 1/2;
+    width: 100%;
+    margin: 0 auto;
+    font-size: 16px;
+    padding: 50px;
+  }
+  .eksportVT img, .forhandlerVT img, .webshopSystemInt img, .distributionViTilbyder img, .produktsortimentVT img, .pdesign img, .kortGodt img{
+    grid-row: 3/3;
+    grid-column: 1/3;
+    width: 80%;
+    margin: 0px auto;
+    top:0;
+    padding: 10px;
+  }
+  .btnWrapper{
+    height: 20vh;
+  }
+   #VTbtn{
+     width: 40%;
+   }
+   .stationær, .kaspersky{
+    display: none;
+   }
+   .produktersec img{
+     width: 250px;
+   }
+   .brandssec h1{
+    grid-column: 1/2;
+    font-size: 36px;
+   }
+   .brandssec{
+     justify-content: center;
+     align-items: center;
+     display: flex;
+     flex-direction: column;
+   }
+   .brandpic1, .brandpic2{
+     width:300px;
+     height:300px;
+   }
+    .brandpic1{
+      grid-row: 3;
+      grid-column: 1/2;
+    }
+    
+    .brandpic2{
+      grid-row: 2;
+      grid-column: 1/2;
+      justify-content: center;
+      align-items: center;
+    }
+    .brandpic1 h2{
+      grid-row: 1;
+      grid-column: 2;
+    }
+    
+    .salespic h3{
+      margin: 10px;
+    }
+
+    .faqsec{
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, auto);
+    }
+    .faqsec h1{
+      grid-column: 1;
+      grid-row: 1;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+    .faqCard1{
+      grid-column: 1;
+      grid-row: 2;
+    }
+    .faqCard2{
+      grid-column: 1;
+      grid-row: 3;
+    }
+    .faqCard3{
+      grid-column: 1;
+      grid-row: 4;
+    }
+    .faqCard4{
+      grid-column: 1;
+      grid-row: 5;
+    }
+    .faqCard5{
+      grid-column: 1;
+      grid-row: 6;
+    }
+    .faqCard6{
+      grid-column: 1;
+      grid-row: 7;
+    }
+   .personaleVelkommen{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+  }
+
+  .personaleH1{
+    margin-bottom: 50px;
+  }
+  .personaleVelkommen h2{
+    grid-row: 2;
+    grid-column: 1/3;
+    margin: 0px auto;
+    font-size: 36px;
+    padding: 40px 40px 0px 40px;
+  }
+  .personaleVelkommen p{
+    grid-row: 3;
+    grid-column: 1/3;
+    width: 100%;
+    padding: 40px;
+  }
+  .personaleVelkommen img{
+    grid-row: 5;
+    grid-column: 1/3;
+    display: none;
+  }
+  .personalePic{
+    width: 180px;
+    height: 180px;
+  }
+  .kasper h3, .nicolai h3, .anders h3, .martin h3, .rene h3, .klaus h3 {
+    margin-top: 160px;
+    width: 100%;
+  } 
+  .kasper h4, .nicolai h4, .anders h4, .martin h4, .rene h4, .klaus h4{
+    margin-top: 10px;
+    width: 100%;
+  }
+  .kasper{
+    grid-row: 1;
+    grid-column: 1/2;
+  }
+  .nicolai{
+    grid-row: 1;
+    grid-column: 2/3;
+  }
+  .anders{
+    grid-row: 2;
+    grid-column: 1/2;
+  }
+  .martin{
+    grid-row: 2;
+    grid-column: 2/3;
+  }
+  .rene{
+    grid-row: 3;
+    grid-column: 1/2;
+  }
+  .klaus{
+    grid-row: 3;
+    grid-column: 2/3;
+  }
+  .pSecWrap{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3fr;
+    justify-content: center;
+    align-items: center;
+    margin: 100px auto 0 auto;
+  }
+  .pSecWrap img{
+    display: block;
+    grid-row: 4;
+    grid-column: 1/3;
+    width: 100%;
+    margin: 0;
+  }
+
+  .pSecWrap .btn{
+    display: block;
+    grid-row: 4;
+    grid-column: 1/3;
+    z-index: 2;
+    margin: 0 auto;
+    width: 30%;
+  }
+  .hovedkontor, .rmaLager{
+    padding: 1em 1em 1em 20px;
+    text-align: center;
+  }
+  .hovedkontor h2, .rmaLager h2{
+    font-size: 26px;
+  }
+  .hovedkontor h3, .rmaLager h3{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px;
+  }
+  .hovedkontor p, .rmaLager p{
+    font-size: 14px;
+    padding: 10px;
+    margin: -10px auto;
+  }
+  .kortGodt h2, .levering h2{
+    margin-top:0;
+
+  }
+  .omOsH1{
+    margin-bottom: 0;
+  }
+  .kortGodt p{
+    margin: 0px auto -100px auto;
+  }
+  .levering img, .struktur img, .lager img, .kundeservice img{
+    width: 100%;
+  }
+  .btnWrapper{
+    grid-template-columns: repeat(3, auto);
+  }
+
+  
+  #Omtbn{
+    width: 100%;
+  }
+}
+
+  
