@@ -60,4 +60,4 @@ $(document).ready(function(){
 
 }
 
-// document.addEventListener('DOMContentLoaded', app.init); */
+document.addEventListener('DOMContentLoaded', app.init); */
